@@ -9,17 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    private var count = DiskVar<NSNumber>(key: "ViewController.count", defaultValue: 5)
+    
+    func getCount() {
+        print(count.value.integerValue)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setCount() {
+        count.value = 5
+        print(count.value.integerValue)
     }
-
-
 }
 

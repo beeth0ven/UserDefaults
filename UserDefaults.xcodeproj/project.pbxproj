@@ -12,6 +12,7 @@
 		4548B7B31C474B3D00065E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4548B7B11C474B3D00065E23 /* Main.storyboard */; };
 		4548B7B51C474B3D00065E23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4548B7B41C474B3D00065E23 /* Assets.xcassets */; };
 		4548B7B81C474B3D00065E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4548B7B61C474B3D00065E23 /* LaunchScreen.storyboard */; };
+		4548B7C11C474B6C00065E23 /* DiskVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4548B7C01C474B6C00065E23 /* DiskVar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4548B7B41C474B3D00065E23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4548B7B71C474B3D00065E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4548B7B91C474B3D00065E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4548B7C01C474B6C00065E23 /* DiskVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskVar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +59,20 @@
 				4548B7AD1C474B3D00065E23 /* AppDelegate.swift */,
 				4548B7AF1C474B3D00065E23 /* ViewController.swift */,
 				4548B7B11C474B3D00065E23 /* Main.storyboard */,
+				4548B7C01C474B6C00065E23 /* DiskVar.swift */,
+				4548B7BF1C474B4D00065E23 /* Supporting Files */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		4548B7BF1C474B4D00065E23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				4548B7B41C474B3D00065E23 /* Assets.xcassets */,
 				4548B7B61C474B3D00065E23 /* LaunchScreen.storyboard */,
 				4548B7B91C474B3D00065E23 /* Info.plist */,
 			);
-			path = UserDefaults;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4548B7B01C474B3D00065E23 /* ViewController.swift in Sources */,
+				4548B7C11C474B6C00065E23 /* DiskVar.swift in Sources */,
 				4548B7AE1C474B3D00065E23 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
