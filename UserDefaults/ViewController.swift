@@ -9,16 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    private var count = DiskVar<NSNumber>(key: "ViewController.count", defaultValue: 5)
-    
-    func getCount() {
-        print(count.value.integerValue)
-    }
-    
-    func setCount() {
-        count.value = 5
-        print(count.value.integerValue)
-    }
-}
 
+    private var history = DiskVar<[String]>(key: "ViewController.count", defaultValue: ["Wuhan"])
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // get
+        print(history.rawValue)
+        
+        // set
+        history.rawValue.append("ChangSha")
+        print(history.rawValue)
+    }
+
+}
