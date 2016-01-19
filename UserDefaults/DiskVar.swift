@@ -15,7 +15,7 @@ import Foundation
  ```swift
 class ViewController: UIViewController {
     
-    private var history = DiskVar<[String]>(key: "ViewController.count", defaultValue: ["Wuhan"])
+    private var history = DiskVar<[String]>(key: "ViewController.history", defaultValue: ["cat"])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,19 +23,19 @@ class ViewController: UIViewController {
         print(history.rawValue)
         
         // set
-        history.rawValue.append("ChangSha")
+        history.rawValue.append("dog")
         print(history.rawValue)
     }
     
 }
  ```
  */
-struct DiskVar<Type: Any> {
+struct DiskVar<VarType> {
     let key: String
-    let defaultValue: Type
+    let defaultValue: VarType
     
-    var rawValue: Type {
-        get { return userDefaults.objectForKey(key) as? Type ?? defaultValue }
+    var rawValue: VarType {
+        get { return userDefaults.objectForKey(key) as? VarType ?? defaultValue }
         set { userDefaults.setObject(newValue as? AnyObject, forKey: key); userDefaults.synchronize() }
     }
     

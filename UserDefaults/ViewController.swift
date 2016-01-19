@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    private var history = DiskVar<[String]>(key: "ViewController.count", defaultValue: ["Wuhan"])
+    
+    private var history = DiskVar<[String]>(key: "ViewController.history", defaultValue: ["cat"])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         print(history.rawValue)
         
         // set
-        history.rawValue.append("ChangSha")
+        history.rawValue.append("dog")
         print(history.rawValue)
     }
-
+    
 }
